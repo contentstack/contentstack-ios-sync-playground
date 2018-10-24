@@ -82,8 +82,6 @@ APIManager.stack.sync {[weak self] (stack, error) in
 }
 ```
 
-<center/><img src='https://lh4.googleusercontent.com/bizKrsrWWuxiy7Mn4R-cpSDeuu4k6xKwigY4MMEstbqnwVNKLq1N-uwtLuszB6SITx29P9Tz-YnGLDAUZtemMZsynVSehpfpkI7ys8sw7C8y69vr29_CrsL0kFOxXShzPbZ5hX6O' width='300' height='550'/>
-
 On successful sync completion, you will get a sync token in response, which is used to get subsequent (delta) syncs.
 
 ## Step 8: Use pagination token
@@ -119,7 +117,8 @@ APIManager.stack.syncToken(<sync_token>, completion: { (syncStack:SyncStack, err
 })
 ```
 
-<center/><img src='https://lh5.googleusercontent.com/Q3gqUAQxBCzNkHEwUPbCG7WDYGRr_I4uJsWro8Xt7phH4mRNZJV98vy0cUGraxPKf9JTwh2aaw-sIhkKKj2h0-v0vi5PlBWSUvAOhndkhnNglGJ5OaVeLPATnl1hzyJLdx0s4MPV' width='300' height='550'/>
+<center><img src='https://lh4.googleusercontent.com/bizKrsrWWuxiy7Mn4R-cpSDeuu4k6xKwigY4MMEstbqnwVNKLq1N-uwtLuszB6SITx29P9Tz-YnGLDAUZtemMZsynVSehpfpkI7ys8sw7C8y69vr29_CrsL0kFOxXShzPbZ5hX6O' width='300' height='550'/>  <img src='https://lh5.googleusercontent.com/Q3gqUAQxBCzNkHEwUPbCG7WDYGRr_I4uJsWro8Xt7phH4mRNZJV98vy0cUGraxPKf9JTwh2aaw-sIhkKKj2h0-v0vi5PlBWSUvAOhndkhnNglGJ5OaVeLPATnl1hzyJLdx0s4MPV' width='300' height='550'/>
+</center>
 
 
 ## More Resources
