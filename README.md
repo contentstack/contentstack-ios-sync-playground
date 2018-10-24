@@ -3,22 +3,14 @@
 
 This is an example app built using Contentstack’s iOS SDK, Sync API, and Persistence Library. You can try out and play with our Sync API and data persistence with this example app, before building bigger and better applications.
 
-
-
 The [Persistence Library](https://www.contentstack.com/docs/guide/synchronization/using-realm-persistence-library-with-ios-sync-sdk) lets you store data on the device’s local storage, helping you create apps that can work offline too. Perform the steps given below to use the app.
 
 ## Prerequisites
 
 -   [Xcode 7.0 and later](https://developer.apple.com/xcode/)
-
 -   Mac OS X 10.10.4 and later
-
 -   [Contentstack account](https://www.app.contentstack.com/)
-
 -   [Basic knowledge of Contentstack](https://www.contentstack.com/docs/)
-
-
-
 
 In this tutorial, we will first go through the steps involved in configuring Contentstack and then look at the steps required to customize and use the presentation layer.
 
@@ -35,7 +27,6 @@ Log in to your Contentstack account, and [create a new stack](https://www.conten
 For this app, we need one content type: Session. Here’s what it is needed for:
 
 -   Session: Lets you add the session content to your app
-
 
 For quick integration, we have already created the content type. [Download the content types](https://drive.google.com/open?id=1q6JlsAhFjYKnWmMllUrNY4NQMP0ZnEIW) and [import](https://www.contentstack.com/docs/guide/content-types#importing-a-content-type) it to your stack. (If needed, you can [create your own content types](https://www.contentstack.com/docs/guide/content-types#creating-a-content-type). Read more about [Content Types](https://www.contentstack.com/docs/guide/content-types).)
 
@@ -63,16 +54,16 @@ Now add your Contentstack API Key, Delivery Token, and Environment to the APIMan
 
 ```
 class StackConfig {
-static var APIKey = "***REMOVED***"
-static var AccessToken = "DELIVERY_TOKEN"
-static var EnvironmentName = "ENVIRONMENT"
-static var _config : Config {
-get {
-let config = Config()
-config.host = "URL"
-return config
-}
-}
+    static var APIKey = "***REMOVED***"
+    static var AccessToken = "DELIVERY_TOKEN"
+    static var EnvironmentName = "ENVIRONMENT"
+    static var _config : Config {
+        get {
+            let config = Config()
+            config.host = "URL"
+            return config
+        }
+    }
 }
 ```
 
@@ -84,10 +75,10 @@ To perform the initial sync, use the sync method, which fetches all the content 
 
 ```
 APIManager.stack.sync {[weak self] (stack, error) in
-guard let slf = self, let syncStack = stack else {return}
-if (error == nill) {
-syncStack.items.count;
-}
+    guard let slf = self, let syncStack = stack else {return}
+    if (error == nill) {
+        syncStack.items.count;
+    }
 }
 ```
 
@@ -101,10 +92,10 @@ To complete the sync process, use the following function:
 
 ```
 APIManger.stack.syncPaginationToken(<pagination_token>, completion: {[weak self] (stack, error) in
-guard let slf = self, let syncStack = stack else {return}
-if (error == nill) {
-syncStack.items.count;
-}
+    guard let slf = self, let syncStack = stack else {return}
+    if (error == nill) {
+        syncStack.items.count;
+    }
 })
 ```
 # Step 9: Subsequent sync
@@ -119,14 +110,13 @@ For the Delta sync button on the storyboard, add the following action in ViewCon
 To perform Subsequent sync process, add the following function:
 ```
 APIManager.stack.syncToken(<sync_token>, completion: { (syncStack:SyncStack, error:NSError) in
-guard let slf = self, let syncStack = stack else {return}
-if (error == nill) {
-syncStack.items.count;
-}
+    guard let slf = self, let syncStack = stack else {return}
+    if (error == nill) {
+        syncStack.items.count;
+    }
 })
 ```
-
-![](https://lh3.googleusercontent.com/DzdkSx-GQ0TRRTKqKCNkaPJSgh35opZnFybGl7eqpTErkcT6uYgGtp2s6srRHon-KwC4mirsuCuGA9PWVTvOWNujB5W0Z5AImtTlKley86k-07i5cZXZv4m03ND9_UJtk2WLz2Hs)
+<img src='https://lh3.googleusercontent.com/DzdkSx-GQ0TRRTKqKCNkaPJSgh35opZnFybGl7eqpTErkcT6uYgGtp2s6srRHon-KwC4mirsuCuGA9PWVTvOWNujB5W0Z5AImtTlKley86k-07i5cZXZv4m03ND9_UJtk2WLz2Hs' width='300' height='550'/>
 
 ## More Resources
 
