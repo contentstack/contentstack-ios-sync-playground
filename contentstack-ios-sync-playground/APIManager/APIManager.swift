@@ -10,12 +10,12 @@ import UIKit
 import Contentstack
 class StackConfig {
     static var APIKey           = "***REMOVED***"
-    static var AccessToken    = "***REMOVED***"
-    static var EnvironmentName  = "web"
+    static var AccessToken    = "ACCESS_TOKEN"
+    static var EnvironmentName  = "ENVIRONMENT"
     static var _config : Config {
         get {
             let config = Config()
-            config.host = "stag-cdn.contentstack.io"
+//            config.host = "URL"
             return config
         }
     }
