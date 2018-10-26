@@ -2,8 +2,6 @@
 
 This is a demo playground app built using Contentstack’s iOS SDK and Sync API. You can try out and play with our Sync API with this example app, before building bigger and better applications.
 
-Note that this app does not store data on the device’s local storage. To create offline apps, view our other [example app that uses Persistence Library](https://github.com/contentstack/contentstack-ios-persistence-example) with the Sync API.
-
 Perform the steps given below to use this example app.
 
 ## Prerequisites
@@ -66,10 +64,10 @@ To perform initial ```sync```, use the sync method, which fetches all the conten
 
 ```
 APIManager.stack.sync {[weak self] (stack, error) in
-guard let slf = self, let syncStack = stack else {return}
-if (error == nill) {
-syncStack.items.count;
-}
+    guard let slf = self, let syncStack = stack else {return}
+    if (error == nill) {
+        syncStack.items.count;
+    }
 }
 ```
 
@@ -109,10 +107,8 @@ APIManager.stack.syncToken(<sync_token>, completion: { (syncStack:SyncStack, err
 ```
 <img src='https://github.com/contentstack/contentstack-ios-sync-playground/blob/master/Images/Subsequentsync.png' width='300' height='550'/>
 
-This is a simple playground app that helps you understand how the Sync API works with the iOS SDK. To learn how to persist data in order to create offline apps, refer to the [iOS demo app](https://github.com/contentstack/contentstack-ios-persistence-example) built using the Persistence Library.
 
 ## More Resources
 -   [Getting started with iOS SDK](https://www.contentstack.com/docs/platforms/ios)
 -   [Using the Sync API with iOS SDK](https://www.contentstack.com/docs/guide/synchronization/using-the-sync-api-with-ios-sdk)
--   [Using Persistence Library with iOS SDK](https://www.contentstack.com/docs/guide/synchronization/using-realm-persistence-library-with-ios-sync-sdk)
 -   [Sync API documentation](https://www.google.com/url?q=https://www.contentstack.com/docs/apis/content-delivery-api/#synchronization&sa=D&ust=1540373553842000&usg=AFQjCNErftWljzbGy77oAYK01xsOU4z_rw)
