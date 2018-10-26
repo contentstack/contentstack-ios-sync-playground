@@ -60,7 +60,7 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func deltaSync(_ sender: Any) {
+    @IBAction func subsequentSync(_ sender: Any) {
         if let syncToken = self.syncToken {
             self.syncButton.isEnabled = false
             self.deltaSyncButton.isEnabled = false
