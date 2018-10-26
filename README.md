@@ -75,7 +75,7 @@ syncStack.items.count;
 
 On successful sync completion, you will get a sync token in response, which you need to use to get subsequent (delta) syncs.
 
-<img src='https://github.com/contentstack/contentstack-ios-sync-playground/blob/master/Images/InitialSyncProgress.png' width='300' height='550'/>
+<img src='https://github.com/contentstack/contentstack-ios-sync-playground/blob/master/Images/SyncCompleted.png' width='300' height='550'/>
 
 
 ## Step 7: Use pagination token
