@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.deltaSyncButton.isEnabled = false
-//        if let syncT = UserDefaults.standard.value(forKey: "SYNC_TOKEN") as? String {
+//        if let syncT = KeychainHelper.shared.retrieve(forKey: "SYNC_TOKEN") {
 //            self.syncToken = syncT
 //            self.tokenLabel.text = "Sync Token: \(syncT)"
 //        }
@@ -39,7 +39,7 @@ class ViewController: UIViewController {
     
     // Call this function when initial sync inturepted while paginating and you have Pagination Token
     func paginateSync() {
-        if let pageT = UserDefaults.standard.value(forKey: "PAGE_TOKEN") as? String {
+        if let pageT = KeychainHelper.shared.retrieve(forKey: "PAGE_TOKEN") {
             self.pageToken = pageT
             self.tokenLabel.text = "Page Token: \(pageT)"
             APIManger.stack.syncPaginationToken(pageT, completion: {[weak self] (stack, error) in
@@ -78,8 +78,7 @@ class ViewController: UIViewController {
             self.deltaSyncButton.isEnabled = true
             self.messageLabel.text = "Contentstack Sync Done"
             self.syncToken = token //Store sync token for subsequent Sync
-            UserDefaults.standard.setValue(token, forKey: "SYNC_TOKEN")
-            UserDefaults.standard.synchronize()
+            _ = KeychainHelper.shared.save(token, forKey: "SYNC_TOKEN")
             self.tokenLabel.text = "Next Sync Token: \(token)"
             if let itemArray = syncStack.items {
                 self.currentLoad = Int(itemArray.count) + (self.currentLoad)
@@ -87,8 +86,7 @@ class ViewController: UIViewController {
         }else if let token = syncStack.paginationToken {
             self.messageLabel.text = "Contentstack Paginating Sync"
             self.pageToken = token //Store pagination token 
-            UserDefaults.standard.setValue(token, forKey: "PAGE_TOKEN")
-            UserDefaults.standard.synchronize()
+            _ = KeychainHelper.shared.save(token, forKey: "PAGE_TOKEN")
             self.tokenLabel.text = "Pagination Token: \(token)"
             if let itemArray = syncStack.items {
                 self.currentLoad = Int(itemArray.count) + (self.currentLoad)
