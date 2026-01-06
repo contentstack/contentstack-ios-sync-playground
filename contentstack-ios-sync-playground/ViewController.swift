@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         if let pageT = KeychainHelper.shared.retrieve(forKey: "PAGE_TOKEN") {
             self.pageToken = pageT
             self.tokenLabel.text = "Page Token: \(pageT)"
-            APIManger.stack.syncPaginationToken(pageT, completion: {[weak self] (stack, error) in
+            APIManager.stack.syncPaginationToken(pageT, completion: {[weak self] (stack, error) in
                 guard let slf = self, let syncStack = stack else {return}
                 slf.parse(syncStack)
             })
@@ -54,7 +54,7 @@ class ViewController: UIViewController {
         self.deltaSyncButton.isEnabled = false
         self.currentLoad = 0
         self.messageLabel.text = "Sync in progress..."
-        APIManger.stack.sync {[weak self] (stack, error) in
+        APIManager.stack.sync {[weak self] (stack, error) in
             guard let slf = self, let syncStack = stack else {return}
             slf.parse(syncStack)
         }
@@ -65,7 +65,7 @@ class ViewController: UIViewController {
             self.syncButton.isEnabled = false
             self.deltaSyncButton.isEnabled = false
             self.messageLabel.text = "Sync in progress..."
-            APIManger.stack.syncToken(syncToken, completion: {[weak self] (stack, error) in
+            APIManager.stack.syncToken(syncToken, completion: {[weak self] (stack, error) in
                 guard let slf = self, let syncStack = stack else {return}
                 slf.parse(syncStack)
             })

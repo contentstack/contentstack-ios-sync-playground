@@ -21,7 +21,7 @@ class StackConfig {
     }
 }
 
-enum APIManger {
+enum APIManager {
     
     static var stack : Stack = Contentstack.stack(withAPIKey: StackConfig.APIKey, accessToken: StackConfig.AccessToken, environmentName: StackConfig.EnvironmentName, config:StackConfig._config)
 }
