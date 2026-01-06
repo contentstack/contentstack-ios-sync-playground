@@ -16,6 +16,7 @@
 		FAF18BD621099C3A00734C94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF18BD421099C3A00734C94 /* Main.storyboard */; };
 		FAF18BD821099C3A00734C94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF18BD721099C3A00734C94 /* Assets.xcassets */; };
 		FAF18BDB21099C3A00734C94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF18BD921099C3A00734C94 /* LaunchScreen.storyboard */; };
+		FE12C3A9B1E2F3456789ABCD /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE12C3A8B1E2F3456789ABCE /* KeychainHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		FAF18BD721099C3A00734C94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAF18BDA21099C3A00734C94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAF18BDC21099C3A00734C94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE12C3A8B1E2F3456789ABCE /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,20 +93,21 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FAF18BCF21099C3A00734C94 /* contentstack-ios-sync-playground */ = {
-			isa = PBXGroup;
-			children = (
-				FA9B19B9216F197000FF8D1B /* APIManager */,
-				FAF18BD021099C3A00734C94 /* AppDelegate.swift */,
-				FAF18BD221099C3A00734C94 /* ViewController.swift */,
-				FAF18BD421099C3A00734C94 /* Main.storyboard */,
-				FAF18BD721099C3A00734C94 /* Assets.xcassets */,
-				FAF18BD921099C3A00734C94 /* LaunchScreen.storyboard */,
-				FAF18BDC21099C3A00734C94 /* Info.plist */,
-			);
-			path = "contentstack-ios-sync-playground";
-			sourceTree = "<group>";
-		};
+	FAF18BCF21099C3A00734C94 /* contentstack-ios-sync-playground */ = {
+		isa = PBXGroup;
+		children = (
+			FA9B19B9216F197000FF8D1B /* APIManager */,
+			FAF18BD021099C3A00734C94 /* AppDelegate.swift */,
+			FAF18BD221099C3A00734C94 /* ViewController.swift */,
+			FE12C3A8B1E2F3456789ABCE /* KeychainHelper.swift */,
+			FAF18BD421099C3A00734C94 /* Main.storyboard */,
+			FAF18BD721099C3A00734C94 /* Assets.xcassets */,
+			FAF18BD921099C3A00734C94 /* LaunchScreen.storyboard */,
+			FAF18BDC21099C3A00734C94 /* Info.plist */,
+		);
+		path = "contentstack-ios-sync-playground";
+		sourceTree = "<group>";
+	};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -224,6 +227,7 @@
 				FA9B19BB216F197000FF8D1B /* APIManager.swift in Sources */,
 				FAF18BD321099C3A00734C94 /* ViewController.swift in Sources */,
 				FAF18BD121099C3A00734C94 /* AppDelegate.swift in Sources */,
+				FE12C3A9B1E2F3456789ABCD /* KeychainHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

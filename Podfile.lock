@@ -1,0 +1,16 @@
+PODS:
+  - Contentstack (3.14.0)
+
+DEPENDENCIES:
+  - Contentstack
+
+SPEC REPOS:
+  trunk:
+    - Contentstack
+
+SPEC CHECKSUMS:
+  Contentstack: ab1ae3070a377baa197d287646e5c0fb8aebc4c4
+
+PODFILE CHECKSUM: d03d3787ef6073a9fb43aa0c594d5d1c8fa5deaa
+
+COCOAPODS: 1.16.2
