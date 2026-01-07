@@ -1,3 +1,5 @@
+> [!WARNING]
+  **This repo is deprecated and no longer maintained. Security updates are not supported. We recommend avoiding its use.** We recommend viewing our latest [Kickstarts](https://www.contentstack.com/docs/developers/kickstarts).
 # Build a playground app using Sync API with Contentstack’s iOS SDK
 
 This is a demo playground app built using Contentstack’s iOS SDK and Sync API. You can try out and play with our Sync API with this example app, before building bigger and better applications.
